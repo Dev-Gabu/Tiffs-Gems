@@ -16,6 +16,16 @@ function item_to_index(_rarity){
 		index = 4
 	}else if _rarity == "Lendario"{
 		index = 5
+	}else if _rarity == "Gema de Quartzo"{
+		index = 6
+	}else if _rarity == "Gema de Ametista"{
+		index = 7
+	}else if _rarity == "Gema de Safira"{
+		index = 8
+	}else if _rarity == "Gema de Rubi"{
+		index = 9
+	}else if _rarity == "Gema de Diamante"{
+		index = 10
 	}else 
 		index = 0
 		

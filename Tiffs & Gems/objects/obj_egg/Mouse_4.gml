@@ -6,9 +6,10 @@ var egg = new create_egg(
 	rarity);
 
 for (var i = 0; i < obj_inventory.inventory_slots; i++) {
-    if (obj_inventory.hotbar[i] == -1) {
+    if (obj_inventory.hotbar[i] == -1 and global.money >= cost) {
         obj_inventory.hotbar[i] = egg;
 		instance_destroy(self)
+		global.money -= cost
         break;
     }
 }

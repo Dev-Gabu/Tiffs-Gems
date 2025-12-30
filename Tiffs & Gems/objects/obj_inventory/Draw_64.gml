@@ -1,7 +1,6 @@
 // INVENTARIO
 
 draw_sprite(spr_inventory,0,position_x,position_y)
-draw_sprite(spr_selection,0,position_select,position_y)
 
 for (var i = 0; i < obj_inventory.inventory_slots; i++) {
     if (hotbar[i] != -1) {
@@ -9,14 +8,14 @@ for (var i = 0; i < obj_inventory.inventory_slots; i++) {
     }
 }
 
+draw_sprite(spr_selection,0,position_select,position_y)
+
 // LOGS
 
-var _log_1 = ""
-var _log_2 = ""
+var _log_1 = "$ " + string(global.money)
 
 draw_set_font(fnt_log)
 draw_text(32,32,_log_1)
-draw_text(32,64,_log_2)
 
 // POSICIONAR
 

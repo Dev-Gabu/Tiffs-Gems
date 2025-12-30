@@ -55,16 +55,22 @@ function hatch_creature() {
         name = _species_stats.name;
         sprite_index = _species_stats.sprite;
         move_speed = _species_stats.move_speed;
+		mining_speed = _species_stats.mining_speed
         luck = _species_stats.luck;
         gem_mult = _species_stats.gem_value_mult;
-        
-        //if (other.rarity == "Lendário") {
-        //    move_speed *= 1.5;
-        //    image_blend = c_gold;
-        //}
     }
-	//effect_create_above(ef_explosion, x, y, 1, c_white);
     instance_destroy();
+}
+
+function rarity_get_cost(_rarity_tag) {
+    switch (_rarity_tag) {
+        case "Comum":     return 50;
+        case "Incomum":   return 150;
+        case "Raro":      return 400;
+        case "Epico":     return 1000;
+        case "Lendario":  return 3000;
+        default:          return 500;
+    }
 }
 
 function rarity_get_pool(_rarity_tag) {
