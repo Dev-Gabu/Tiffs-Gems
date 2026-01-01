@@ -1,5 +1,5 @@
 if global.ores_in_game < MAX_ore { 
-	instance_create_depth(random_range(32,room_width-32),random_range(room_height/4,room_height-32),1,obj_ore)
+	instance_create_depth(random_range(64,room_width-64),random_range(room_height/4,room_height-64),1,obj_ore)
 	global.ores_in_game += 1
 }
 

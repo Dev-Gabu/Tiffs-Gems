@@ -6,6 +6,6 @@ if (hatch_timer > 0) {
     }
 
     if (hatch_timer <= 0) {
-        hatch_creature()
+        hatch_creature(rarity)
     }
 }
